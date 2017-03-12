@@ -13,6 +13,7 @@ import org.openqa.selenium.Dimension;
 import org.openqa.selenium.OutputType;
 import org.openqa.selenium.TakesScreenshot;
 import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.firefox.FirefoxBinary;
 import org.openqa.selenium.firefox.FirefoxDriver;
 import org.openqa.selenium.firefox.FirefoxProfile;
 import org.openqa.selenium.phantomjs.PhantomJSDriver;
@@ -38,11 +39,11 @@ public final class LoginTest {
 
          //Move image file to new destination
 
-             File DestFile=new File("/Users/Shared/Jenkins/Home/workspace/Jenkins/screenshot1.jpeg");
+           //  File DestFile=new File("/Users/Shared/Jenkins/Home/workspace/Jenkins/screenshot1.jpeg");
 
              //Copy file at destination
 
-             FileUtils.copyFile(SrcFile, DestFile);
+          //   FileUtils.copyFile(SrcFile, DestFile);
 	System.out.println(driver.getTitle());
 	driver.quit();
 	}
@@ -54,6 +55,8 @@ public final class LoginTest {
 		/*FirefoxProfile profile = new FirefoxProfile(new File("/Users/Dev/Library/Application Support/Firefox/Profiles/j3y30yg4.dev-edition-default"));                  
 		WebDriver driver = new FirefoxDriver(profile);*/
 	    
+		/*File pathToBinary = new File("/usr/local/bin/Firefox.app");
+		FirefoxBinary fxBinary = new FirefoxBinary(pathToBinary);*/
 		FirefoxProfile fxProfile = new FirefoxProfile();
 
 	    fxProfile.setPreference("browser.download.folderList",2);
@@ -61,7 +64,7 @@ public final class LoginTest {
 	    fxProfile.setPreference("browser.download.dir","/Users/Dev/Downloads");
 	    fxProfile.setPreference("browser.helperApps.neverAsk.saveToDisk","text/csv");
 
-	    WebDriver driver = new FirefoxDriver();
+	    WebDriver driver = new FirefoxDriver(fxProfile);
 		/*System.setProperty("phantomjs.binary.path", "/usr/local/bin/phantomjs");	
 		DesiredCapabilities cap = DesiredCapabilities.phantomjs();	
 		WebDriver driver = new PhantomJSDriver(cap);*/
@@ -77,11 +80,11 @@ public final class LoginTest {
 
 	            //Move image file to new destination
 
-	                File DestFile=new File("/Users/Shared/Jenkins/Home/workspace/Jenkins/screenshot.jpeg");
+	                //File DestFile=new File("/Users/Shared/Jenkins/Home/workspace/Jenkins/screenshot.jpeg");
 
 	                //Copy file at destination
 
-	                FileUtils.copyFile(SrcFile, DestFile);
+	               // FileUtils.copyFile(SrcFile, DestFile);
 		//new WebDriverWait(driver, 30).until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//*[@id='username']"))).sendKeys("user01");
 		driver.findElement(By.xpath("//*[@id='username']")).sendKeys("user01");
 		driver.findElement(By.xpath("//*[@id='login']")).sendKeys("guru99com");

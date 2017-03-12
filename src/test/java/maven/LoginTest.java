@@ -9,7 +9,7 @@ public final class LoginTest {
 
 	@Test	
 	public void verifyFacebookLogin(){
-	System.setProperty("phantomjs.binary.path", "//Users//Dev//Downloads//phantomjs-2.1.1-macosx//bin//phantomjs");	
+	System.setProperty("phantomjs.binary.path", "/Users/Dev/Library/Application Support/Java/Java 1.8.111.14/phantomjs");	
 	DesiredCapabilities cap = DesiredCapabilities.phantomjs();	
 	WebDriver driver = new PhantomJSDriver(cap);
 	driver.get("https://www.facebook.com");

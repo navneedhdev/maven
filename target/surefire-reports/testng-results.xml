@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testng-results skipped="0" failed="0" total="2" passed="2">
+  <reporter-output>
+  </reporter-output>
+  <suite name="Surefire suite" duration-ms="51002" started-at="2017-03-12T09:00:54Z" finished-at="2017-03-12T09:01:45Z">
+    <groups>
+    </groups>
+    <test name="Surefire test" duration-ms="51002" started-at="2017-03-12T09:00:54Z" finished-at="2017-03-12T09:01:45Z">
+      <class name="maven.LoginTest">
+        <test-method status="PASS" signature="mainTest()[pri:0, instance:maven.LoginTest@7a79be86]" name="mainTest" duration-ms="45442" started-at="2017-03-12T20:00:54Z" finished-at="2017-03-12T20:01:40Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- mainTest -->
+        <test-method status="PASS" signature="verifyFacebookLogin()[pri:0, instance:maven.LoginTest@7a79be86]" name="verifyFacebookLogin" duration-ms="5542" started-at="2017-03-12T20:01:40Z" finished-at="2017-03-12T20:01:45Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- verifyFacebookLogin -->
+      </class> <!-- maven.LoginTest -->
+    </test> <!-- Surefire test -->
+  </suite> <!-- Surefire suite -->
+</testng-results>

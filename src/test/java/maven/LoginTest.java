@@ -5,6 +5,7 @@ import java.io.BufferedReader;
 import java.io.File;
 import java.io.FileReader;
 import java.io.IOException;
+import java.util.Random;
 import java.util.concurrent.TimeUnit;
 
 import org.apache.commons.io.FileUtils;
@@ -38,7 +39,8 @@ public final class LoginTest {
 
          //Move image file to new destination
 
-             File DestFile=new File("/Users/Dev/Downloads/screenshot1.jpg");
+             String file = "/Users/Dev/Downloads/Screenshot/" + (new Random().nextInt())+".jpeg";
+             File DestFile=new File(file);
 
              //Copy file at destination
 
@@ -75,8 +77,8 @@ public final class LoginTest {
 	                File SrcFile=scrShot.getScreenshotAs(OutputType.FILE);
 
 	            //Move image file to new destination
-
-	                File DestFile=new File("/Users/Dev/Downloads/screenshot.jpg");
+	                String file = "/Users/Dev/Downloads/Screenshot/" + (new Random().nextInt())+".jpeg";
+	                File DestFile=new File(file);
 
 	                //Copy file at destination
 

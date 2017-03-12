@@ -34,14 +34,14 @@ public final class LoginTest {
 		System.setProperty("webdriver.gecko.driver","/usr/local/bin/geckodriver");
 	/*	FirefoxProfile profile = new FirefoxProfile(new File("/Users/Dev/Library/Application Support/Firefox/Profiles/j3y30yg4.dev-edition-default"));                  
 		WebDriver driver = new FirefoxDriver(profile);*/
-	FirefoxProfile fxProfile = new FirefoxProfile();
+	/*FirefoxProfile fxProfile = new FirefoxProfile();
 
 	    fxProfile.setPreference("browser.download.folderList",2);
 	    fxProfile.setPreference("browser.download.manager.showWhenStarting",false);
 	    fxProfile.setPreference("browser.download.dir","/Users/Dev/Downloads");
-	    fxProfile.setPreference("browser.helperApps.neverAsk.saveToDisk","text/csv");
+	    fxProfile.setPreference("browser.helperApps.neverAsk.saveToDisk","text/csv");*/
 
-	    WebDriver driver = new FirefoxDriver(fxProfile);
+	    WebDriver driver = new FirefoxDriver();
 
 		driver.manage().timeouts().implicitlyWait(10,TimeUnit.SECONDS);
 		driver.get("http://live.guru99.com/index.php/backendlogin");

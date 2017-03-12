@@ -44,7 +44,7 @@ public final class LoginTest {
 	    WebDriver driver = new FirefoxDriver();
 
 		driver.manage().timeouts().implicitlyWait(10,TimeUnit.SECONDS);
-		driver.get("http://live.guru99.com/index.php/backendlogin");
+		driver.get("https://live.guru99.com/index.php/backendlogin");
 		driver.findElement(By.xpath("//*[@id='username']")).sendKeys("user01");
 		driver.findElement(By.xpath("//*[@id='login']")).sendKeys("guru99com");
 		driver.findElement(By.xpath("//*[@class='form-button']")).click();

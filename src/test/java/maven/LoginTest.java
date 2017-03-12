@@ -38,7 +38,7 @@ public final class LoginTest {
 
          //Move image file to new destination
 
-             File DestFile=new File("/Users/Dev/Downloads/screenshot1.jpg");
+             File DestFile=new File("/Users/Shared/Jenkins/Home/workspace/Jenkins/screenshot1.jpeg");
 
              //Copy file at destination
 
@@ -76,7 +76,7 @@ public final class LoginTest {
 
 	            //Move image file to new destination
 
-	                File DestFile=new File("/Users/Dev/Downloads/screenshot.jpg");
+	                File DestFile=new File("/Users/Shared/Jenkins/Home/workspace/Jenkins/screenshot.jpeg");
 
 	                //Copy file at destination
 

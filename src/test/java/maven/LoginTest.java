@@ -31,7 +31,7 @@ public final class LoginTest {
 	@Test
 	public void mainTest() throws InterruptedException, AWTException, IOException
 	{
-		System.setProperty("webdriver.gecko.driver","/Users/Dev/Downloads/geckodriver");
+		System.setProperty("webdriver.gecko.driver","/usr/local/bin/geckodriver");
 	/*	FirefoxProfile profile = new FirefoxProfile(new File("/Users/Dev/Library/Application Support/Firefox/Profiles/j3y30yg4.dev-edition-default"));                  
 		WebDriver driver = new FirefoxDriver(profile);*/
 		FirefoxProfile fxProfile = new FirefoxProfile();

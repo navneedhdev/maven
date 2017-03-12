@@ -34,7 +34,7 @@ public final class LoginTest {
 		System.setProperty("webdriver.gecko.driver","/usr/local/bin/geckodriver");
 	/*	FirefoxProfile profile = new FirefoxProfile(new File("/Users/Dev/Library/Application Support/Firefox/Profiles/j3y30yg4.dev-edition-default"));                  
 		WebDriver driver = new FirefoxDriver(profile);*/
-		FirefoxProfile fxProfile = new FirefoxProfile();
+	FirefoxProfile fxProfile = new FirefoxProfile();
 
 	    fxProfile.setPreference("browser.download.folderList",2);
 	    fxProfile.setPreference("browser.download.manager.showWhenStarting",false);
@@ -48,7 +48,7 @@ public final class LoginTest {
 		driver.findElement(By.xpath("//*[@id='username']")).sendKeys("user01");
 		driver.findElement(By.xpath("//*[@id='login']")).sendKeys("guru99com");
 		driver.findElement(By.xpath("//*[@class='form-button']")).click();
-		Thread.sleep(15000);
+		Thread.sleep(20000);
 		String parent = driver.getWindowHandle();
 		System.out.println(parent);
 		for(String handle : driver.getWindowHandles())
@@ -59,10 +59,9 @@ public final class LoginTest {
 		}
 		Thread.sleep(5000);
 		 driver.findElement(By.linkText("Sales")).click();
-		 Thread.sleep(2000);
-		// driver.findElement(By.linkText("Orders")).click();     
+		//driver.findElement(By.linkText("Orders")).click();     
 	
-		 driver.get("http://live.guru99.com/index.php/backendlogin/sales_order/index/key/8fb6e51708850a975c39ed979997cb1e/");
+		driver.get("http://live.guru99.com/index.php/backendlogin/sales_order/index/key/8fb6e51708850a975c39ed979997cb1e/");
 		 Thread.sleep(3000);
 		 new Select(driver.findElement(By.xpath("//*[@id='sales_order_grid_export']"))).selectByVisibleText("CSV");
 		 driver.findElement(By.xpath("//*[@id='sales_order_grid_export']//following-sibling::button[1]")).click();
@@ -81,7 +80,7 @@ public final class LoginTest {
 				fr.close();
 				br.close();
 		
-		
+		driver.quit();
 	}
 	
 	

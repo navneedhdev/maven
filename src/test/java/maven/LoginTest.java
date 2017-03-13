@@ -27,9 +27,11 @@ public final class LoginTest {
 
 	@Test	
 	public void verifyFacebookLogin() throws IOException{
-	System.setProperty("phantomjs.binary.path", "/usr/local/bin/phantomjs");	
+	/*System.setProperty("phantomjs.binary.path", "/usr/local/bin/phantomjs");	
 	DesiredCapabilities cap = DesiredCapabilities.phantomjs();	
-	WebDriver driver = new PhantomJSDriver(cap);
+	WebDriver driver = new PhantomJSDriver(cap);*/
+		System.setProperty("webdriver.gecko.driver","/usr/local/bin/geckodriver");		          
+		WebDriver driver = new FirefoxDriver();
 	driver.get("https://www.facebook.com");
 	 TakesScreenshot scrShot =((TakesScreenshot)driver);
 
@@ -47,16 +49,16 @@ public final class LoginTest {
 	System.out.println(driver.getTitle());
 	driver.quit();
 	}
-	
-	@Test
+}
+	/*@Test
 	public void mainTest() throws InterruptedException, AWTException, IOException
 	{
 		System.setProperty("webdriver.gecko.driver","/usr/local/bin/geckodriver");
-		/*FirefoxProfile profile = new FirefoxProfile(new File("/Users/Dev/Library/Application Support/Firefox/Profiles/j3y30yg4.dev-edition-default"));                  
-		WebDriver driver = new FirefoxDriver(profile);*/
+		FirefoxProfile profile = new FirefoxProfile(new File("/Users/Dev/Library/Application Support/Firefox/Profiles/j3y30yg4.dev-edition-default"));                  
+		WebDriver driver = new FirefoxDriver(profile);
 	    
-		/*File pathToBinary = new File("/usr/local/bin/Firefox.app");
-		FirefoxBinary fxBinary = new FirefoxBinary(pathToBinary);*/
+		File pathToBinary = new File("/usr/local/bin/Firefox.app");
+		FirefoxBinary fxBinary = new FirefoxBinary(pathToBinary);
 		FirefoxProfile fxProfile = new FirefoxProfile();
 
 	    fxProfile.setPreference("browser.download.folderList",2);
@@ -65,13 +67,12 @@ public final class LoginTest {
 	    fxProfile.setPreference("browser.helperApps.neverAsk.saveToDisk","text/csv");
 
 	    WebDriver driver = new FirefoxDriver();
-		/*System.setProperty("phantomjs.binary.path", "/usr/local/bin/phantomjs");	
+		System.setProperty("phantomjs.binary.path", "/usr/local/bin/phantomjs");	
 		DesiredCapabilities cap = DesiredCapabilities.phantomjs();	
-		WebDriver driver = new PhantomJSDriver(cap);*/
+		WebDriver driver = new PhantomJSDriver(cap);
 		driver.manage().window().maximize();
 		driver.manage().timeouts().implicitlyWait(10,TimeUnit.SECONDS);
 		driver.get("http://live.guru99.com/index.php/backendlogin");
-		Thread.sleep(10000);
 		 TakesScreenshot scrShot =((TakesScreenshot)driver);
 
 	        //Call getScreenshotAs method to create image file
@@ -128,3 +129,4 @@ public final class LoginTest {
 	}
 	
 
+*/

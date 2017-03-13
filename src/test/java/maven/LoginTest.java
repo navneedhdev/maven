@@ -64,7 +64,7 @@ public final class LoginTest {
 	    fxProfile.setPreference("browser.download.dir","/Users/Dev/Downloads");
 	    fxProfile.setPreference("browser.helperApps.neverAsk.saveToDisk","text/csv");
 
-	    WebDriver driver = new FirefoxDriver(fxProfile);
+	    WebDriver driver = new FirefoxDriver();
 		/*System.setProperty("phantomjs.binary.path", "/usr/local/bin/phantomjs");	
 		DesiredCapabilities cap = DesiredCapabilities.phantomjs();	
 		WebDriver driver = new PhantomJSDriver(cap);*/

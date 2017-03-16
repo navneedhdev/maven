@@ -33,6 +33,7 @@ public final class LoginTest {
 		System.setProperty("webdriver.gecko.driver","/usr/local/bin/geckodriver");		          
 		WebDriver driver = new FirefoxDriver();
 	driver.get("https://www.facebook.com");
+	System.out.println(driver.getTitle());
 	 TakesScreenshot scrShot =((TakesScreenshot)driver);
 
      //Call getScreenshotAs method to create image file
